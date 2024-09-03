@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="variable_practice.css">
+    <title>Variable Practice in JS</title>
+</head>
+<body>
+    <main>
+        <h1>Cart Summary</h1>
+        <button class="bag-button" onclick="bagButtonFunction()">Add to Bag</button>
+        <button class="wish-button" onclick="wishButtonFunction()">❤️ Wishlist</button>
+        <h1 id = "cart-summary"></h1>
+    </main>
+
+    <script>
+        let totalItems = 0;
+        document.querySelector('#cart-summary').innerText = `You have ${totalItems} items in your bag.`;
+
+        function bagButtonFunction() {
+            totalItems++;
+            document.querySelector('#cart-summary').innerText = `You have ${totalItems} items in your bag.`;
+        }
+        function wishButtonFunction(){
+            totalItems--;
+            document.querySelector('#cart-summary').innerText = `You have ${totalItems} items in your bag.`;
+        }
+
+    </script>
+</body>
+</html>
